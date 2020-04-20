@@ -113,11 +113,6 @@ How to run
 
 4. Upload the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator:
 
-	```r
-	submitResults("export/Results<DatabaseId>.zip", key = "<key>", secret = "<secret>")
-	```
-	
-	Where ```key``` and ```secret``` are the credentials provided to you personally by the study coordinator.
 		
 5. To view the results, use the Shiny app:
 
