@@ -1,15 +1,15 @@
 Thyroid2ndCancer
 ==============================
-Analytics use case(s): Population-Level Estimation
-Study type: Clinical Application
-Tags: OHDSI, medical radiation exposure
-Study lead: Hoyoung Lee, Sooyoung Yoo
-Study lead forums tag:
-Study start date: May 1, 2020
-Study end date:
-Protocol: Protocol
-Publications:
-Results explorer:
+- Analytics use case(s): Population-Level Estimation
+- Study type: Clinical Application
+- Tags: OHDSI, medical radiation exposure
+- Study lead: Hoyoung Lee, Sooyoung Yoo
+- Study lead forums tag:
+- Study start date: 
+- Study end date:
+- Protocol: Protocol
+- Publications:
+- Results explorer:
 
 Background
 ===========
