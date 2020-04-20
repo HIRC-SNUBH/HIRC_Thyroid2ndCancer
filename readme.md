@@ -112,7 +112,7 @@ How to run
 	```
 
 4. Upload the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator:
-
+<lijbdj5051@gmail.com>
 		
 5. To view the results, use the Shiny app:
 
