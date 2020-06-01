@@ -11,7 +11,7 @@ Thyroid2ndCancer
 - Publications:
 - Results explorer:
 
-This study aims to compare the risk of 2nd cancer between Iodine therapy cohort and non-Iodine therapy cohort
+This study aims to evaluate of Iodine-131 exposure effect on the occurrence of secondary cancer in survivors of thyroid cancer.
 
 
 Requirements
