@@ -1,7 +1,16 @@
 Thyroid2ndCancer
 ==============================
-
-
+- Analytics use case(s): Population-Level Estimation
+- Study type: Clinical Application
+- Tags: OHDSI-Korea
+- Study lead: Sooyoung Yoo
+- Study lead forums tag: Sooyoung Yoo
+- Study start date: June 15, 2020
+- Study end date: 
+- Protocol: Protocol
+- Publications:
+- Results explorer:
+This study aims to compare the risk of 2nd cancer between Iodine therapy cohort and non-Iodine therapy cohort
 Requirements
 ============
 
@@ -126,5 +135,3 @@ Development
 Thyroid2ndCancer was developed in ATLAS and R Studio.
 
 ### Development status
-
-Unknown
