@@ -1,13 +1,13 @@
 Thyroid2ndCancer
 ==============================
-- Analytics use case(s): Population-Level Estimation
+- Analytics use case(s): **Population-Level Estimation**
 - Study type: Clinical Application
 - Tags: OHDSI-Korea
-- Study lead: Sooyoung Yoo
-- Study lead forums tag: Sooyoung Yoo
-- Study start date: June 15, 2020
-- Study end date: 
-- Protocol: Protocol
+- Study lead: **Hoyoung Lee, Sooyoung Yoo**
+- Study lead forums tag: [Sooyoung Yoo]
+- Study start date: **(날짜미정)**
+- Study end date: **(날짜미정)**
+- Protocol: [Protocol](https://github.com/SHUBH-HIRC/HIRC_public/blob/master/documents/Thyroid2ndCancer_Protocols.docx)
 - Publications:
 - Results explorer:
 
@@ -112,7 +112,7 @@ How to run
             maxCores = maxCores)
 	```
 
-4. Upload the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator: (email address 필수)
+4. Upload the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator: <__@gmail.com>(email address 필수)
 
 	```r
 	submitResults("export/Results<DatabaseId>.zip", key = "<key>", secret = "<secret>")
@@ -124,7 +124,7 @@ How to run
 
 	```r
 	prepareForEvidenceExplorer("Result<databaseId>.zip", "/shinyData")
-	launchEvidenceExplorer("/shinyData", blind = FALSE)
+	launchEvidenceExplorer("/shinyData", blind = TRUE)
 	```
   
   Note that you can save plots from within the Shiny app. It is possible to view results from more than one database by applying `prepareForEvidenceExplorer` to the Results file from each database, and using the same data folder. Set `blind = FALSE` if you wish to be unblinded to the final results.
