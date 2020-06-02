@@ -112,7 +112,7 @@ How to run
             maxCores = maxCores)
 	```
 
-4. Upload the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator:
+4. Upload the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator: (email address 필수)
 
 	```r
 	submitResults("export/Results<DatabaseId>.zip", key = "<key>", secret = "<secret>")
@@ -124,7 +124,7 @@ How to run
 
 	```r
 	prepareForEvidenceExplorer("Result<databaseId>.zip", "/shinyData")
-	launchEvidenceExplorer("/shinyData", blind = TRUE)
+	launchEvidenceExplorer("/shinyData", blind = FALSE)
 	```
   
   Note that you can save plots from within the Shiny app. It is possible to view results from more than one database by applying `prepareForEvidenceExplorer` to the Results file from each database, and using the same data folder. Set `blind = FALSE` if you wish to be unblinded to the final results.
