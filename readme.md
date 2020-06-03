@@ -25,6 +25,7 @@ Requirements
 
 See [these instructions](https://ohdsi.github.io/MethodsLibrary/rSetup.html) on how to set up the R environment on Windows.
 
+- i-131 therapy에 대한 procedure table
 How to run
 ==========
 1. In `R`, use the following code to install the dependencies:
