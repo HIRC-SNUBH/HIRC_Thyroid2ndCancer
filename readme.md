@@ -28,7 +28,7 @@ See [these instructions](https://ohdsi.github.io/MethodsLibrary/rSetup.html) on 
 
 - Required fields of CDM and Concept_id include:
 	- (Mandatory fields of CDM) : PERSON, OBSERVATION_PERIOD, CONDITION_OCCURRENCE, PROCEDURE_OCCURRENCE
-	- (Mandatory Concept_id) : [Iodine 131 therapy](https://athena.ohdsi.org/search-terms/terms/4036252)
+	- (Mandatory Concept_id) : [Iodine 131 therapy](https://athena.ohdsi.org/search-terms/terms/4036252), [Thyroidectomy](https://athena.ohdsi.org/search-terms/terms/4030107), [Total thyroidectomy](https://athena.ohdsi.org/search-terms/terms/4073199), 
 
 How to run
 ==========
