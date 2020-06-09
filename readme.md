@@ -2,20 +2,18 @@ I131Thyroid2ndCancerRisk
 ==============================
 <img src="https://img.shields.io/badge/Study%20Status-Repo%20Created-lightgray.svg" alt="Study Status: Repo Created">
 
-- Analytics use case(s): **-**
-- Study type: **-**
-- Tags: **-**
-- Study lead: **-**
-- Study lead forums tag: **[[Lead tag]](https://forums.ohdsi.org/u/[Lead tag])**
-- Study start date: **-**
-- Study end date: **-**
-- Protocol: **-**
-- Publications: **-**
-- Results explorer: **-**
+- Analytics use case(s): Population-Level Estimation
+- Study type: Clinical Application
+- Tags: Thyroid2ndCacner
+- Study lead: Hoyoung Lee, Sooyoung Yoo
+- Study lead forums tag: **[Sooyoung Yoo](https://forums.ohdsi.org/u/[Lead tag])**
+- Study start date: June 15, 2020
+- Study end date: 
+- Protocol: **[Protocol](https://github.com/SHUBH-HIRC/HIRC_Thyroid2ndCancer/blob/master/documents/protocol_I131EffectThyroid2ndCancerRisk.docx)**
+- Publications: 
+- Results explorer:
 
-[Description (single paragraph)]
-
-[You can add other text at this point]
+This study is for estimating the effect of Iodine-131 exposure on the occurrence of secondary cancer in survivors of thyroid cancer.
 
 Requirements
 ============
@@ -27,6 +25,10 @@ Requirements
 - 25 GB of free disk space
 
 See [these instructions](https://ohdsi.github.io/MethodsLibrary/rSetup.html) on how to set up the R environment on Windows.
+
+- Required fields of CDM and Concept_id include:
+	- (Mandatory fields of CDM) : PERSON, OBSERVATION_PERIOD, CONDITION_OCCURRENCE, PROCEDURE_OCCURRENCE
+	- (Mandatory Concept_id) : [Iodine 131 therapy](https://athena.ohdsi.org/search-terms/terms/4036252)
 
 How to run
 ==========
@@ -115,7 +117,8 @@ How to run
             maxCores = maxCores)
 	```
 
-4. Upload the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator:
+4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (Sooyoung Yoo,
+(교수님 이메일 주소 or lijbdj5051@gmail.com):
 
 	```r
 	submitResults("export/Results<DatabaseId>.zip", key = "<key>", secret = "<secret>")
