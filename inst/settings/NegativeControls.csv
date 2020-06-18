@@ -1,0 +1,67 @@
+targetId,comparatorId,outcomeId,outcomeName,type
+1288,1286,199192,Abrasion and/or friction burn of trunk without infection,outcome
+1288,1286,4088290,Absence of breast,outcome
+1288,1286,4092879,Absent kidney,outcome
+1288,1286,44783954,Acid reflux,outcome
+1288,1286,75911,Acquired hallux valgus,outcome
+1288,1286,137951,Acquired keratoderma,outcome
+1288,1286,77965,Acquired trigger finger,outcome
+1288,1286,376707,Acute conjunctivitis,outcome
+1288,1286,4103640,Amputated foot,outcome
+1288,1286,73241,Anal and rectal polyp,outcome
+1288,1286,133655,Burn of forearm,outcome
+1288,1286,73560,Calcaneal spur,outcome
+1288,1286,434327,Cannabis abuse,outcome
+1288,1286,140842,Changes in skin texture,outcome
+1288,1286,81378,Chondromalacia of patella,outcome
+1288,1286,432303,Cocaine abuse,outcome
+1288,1286,4201390,Colostomy present,outcome
+1288,1286,46269889,Complication due to Crohn's disease,outcome
+1288,1286,134438,Contact dermatitis,outcome
+1288,1286,78619,Contusion of knee,outcome
+1288,1286,201606,Crohn's disease,outcome
+1288,1286,76786,Derangement of knee,outcome
+1288,1286,45757370,Disproportion of reconstructed breast,outcome
+1288,1286,433111,Effects of hunger,outcome
+1288,1286,4170770,Epidermoid cyst,outcome
+1288,1286,4092896,Feces contents abnormal,outcome
+1288,1286,259995,Foreign body in orifice,outcome
+1288,1286,40481632,Ganglion cyst,outcome
+1288,1286,4166231,Genetic predisposition,outcome
+1288,1286,433577,Hammer toe,outcome
+1288,1286,4231770,Hereditary thrombophilia,outcome
+1288,1286,440329,Herpes zoster without complication,outcome
+1288,1286,4012570,High risk sexual behavior,outcome
+1288,1286,4012934,Homocystinuria,outcome
+1288,1286,441788,Human papilloma virus infection,outcome
+1288,1286,4201717,Ileostomy present,outcome
+1288,1286,374375,Impacted cerumen,outcome
+1288,1286,4344500,Impingement syndrome of shoulder region,outcome
+1288,1286,139099,Ingrowing nail,outcome
+1288,1286,196168,Irregular periods,outcome
+1288,1286,432593,Kwashiorkor,outcome
+1288,1286,434203,Late effect of contusion,outcome
+1288,1286,438329,Late effect of motor vehicle accident,outcome
+1288,1286,195873,Leukorrhea,outcome
+1288,1286,4083487,Macular drusen,outcome
+1288,1286,4103703,Melena,outcome
+1288,1286,4209423,Nicotine dependence,outcome
+1288,1286,377572,Noise effects on inner ear,outcome
+1288,1286,40480893,Nonspecific tuberculin test reaction,outcome
+1288,1286,438130,Opioid abuse,outcome
+1288,1286,4091513,Passing flatus,outcome
+1288,1286,4202045,Postviral fatigue syndrome,outcome
+1288,1286,373478,Presbyopia,outcome
+1288,1286,46286594,Problem related to lifestyle,outcome
+1288,1286,439790,Psychalgia,outcome
+1288,1286,81634,Ptotic breast,outcome
+1288,1286,380706,Regular astigmatism,outcome
+1288,1286,36713918,Somatic dysfunction of lumbar region,outcome
+1288,1286,443172,"Splinter of face, without major open wound",outcome
+1288,1286,81151,Sprain of ankle,outcome
+1288,1286,72748,Strain of rotator cuff capsule,outcome
+1288,1286,437264,Tobacco dependence syndrome,outcome
+1288,1286,194083,Vaginitis and vulvovaginitis,outcome
+1288,1286,140641,Verruca vulgaris,outcome
+1288,1286,4115367,Wrist joint pain,outcome
+1288,1286,440193,Wristdrop,outcome
