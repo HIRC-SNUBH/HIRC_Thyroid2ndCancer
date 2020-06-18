@@ -1,6 +1,6 @@
 # Copyright 2019 Observational Health Data Sciences and Informatics
 #
-# This file is part of I131Thyroid2ndCancerRisk
+# This file is part of Iodine131Thyroid2ndCancerRisk
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,13 +16,13 @@
 
 # Format and check code ---------------------------------------------------
 OhdsiRTools::formatRFolder()
-OhdsiRTools::checkUsagePackage("I131Thyroid2ndCancerRisk")
+OhdsiRTools::checkUsagePackage("Iodine131Thyroid2ndCancerRisk")
 OhdsiRTools::updateCopyrightYearFolder()
 devtools::spell_check()
 
 # Create manual -----------------------------------------------------------
-shell("rm extras/I131Thyroid2ndCancerRisk.pdf")
-shell("R CMD Rd2pdf ./ --output=extras/I131Thyroid2ndCancerRisk.pdf")
+shell("rm extras/Iodine131Thyroid2ndCancerRisk.pdf")
+shell("R CMD Rd2pdf ./ --output=extras/Iodine131Thyroid2ndCancerRisk.pdf")
 
 # Create vignettes ---------------------------------------------------------
 rmarkdown::render("vignettes/UsingSkeletonPackage.Rmd",
@@ -43,7 +43,7 @@ OhdsiRTools::insertCohortDefinitionSetInPackage(fileName = "CohortsToCreate.csv"
                                                 insertTableSql = TRUE,
                                                 insertCohortCreationR = TRUE,
                                                 generateStats = FALSE,
-                                                packageName = "I131Thyroid2ndCancerRisk")
+                                                packageName = "Iodine131Thyroid2ndCancerRisk")
 
 # Create analysis details -------------------------------------------------
 source("extras/CreateStudyAnalysisDetails.R")
@@ -51,4 +51,4 @@ createAnalysesDetails("inst/settings/")
 createPositiveControlSynthesisArgs("inst/settings/")
 
 # Store environment in which the study was executed -----------------------
-OhdsiRTools::insertEnvironmentSnapshotInPackage("I131Thyroid2ndCancerRisk")
+OhdsiRTools::insertEnvironmentSnapshotInPackage("Iodine131Thyroid2ndCancerRisk")

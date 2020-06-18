@@ -2,7 +2,7 @@
 #
 # Copyright 2019 Observational Health Data Sciences and Informatics
 #
-# This file is part of I131Thyroid2ndCancerRisk
+# This file is part of Iodine131Thyroid2ndCancerRisk
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,10 +16,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#' I131Thyroid2ndCancerRisk
+#' Iodine131Thyroid2ndCancerRisk
 #'
 #' @docType package
-#' @name I131Thyroid2ndCancerRisk
+#' @name Iodine131Thyroid2ndCancerRisk
 #' @importFrom stats aggregate density pnorm qnorm quantile
 #' @importFrom utils read.csv write.csv install.packages menu setTxtProgressBar txtProgressBar write.table
 #' @import DatabaseConnector
