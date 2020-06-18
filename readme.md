@@ -9,7 +9,7 @@ I131Thyroid2ndCancerRisk
 - Study lead forums tag: **[Sooyoung Yoo](https://forums.ohdsi.org/u/[Lead tag])**
 - Study start date: June 15, 2020
 - Study end date: 
-- Protocol: **[Protocol](https://github.com/SHUBH-HIRC/HIRC_Thyroid2ndCancer/blob/master/documents/protocol_I131EffectThyroid2ndCancerRisk.docx)**
+- Protocol: **[Protocol](https://github.com/SHUBH-HIRC/HIRC_Thyroid2ndCancer/blob/master/documents/protocol_Iodine131Thyroid2ndCancerRisk.docx)**
 - Publications: 
 - Results explorer:
 
