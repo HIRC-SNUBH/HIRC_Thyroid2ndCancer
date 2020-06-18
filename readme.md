@@ -132,11 +132,11 @@ How to run
 
 License
 =======
-The I131Thyroid2ndCancerRisk package is licensed under Apache License 2.0
+The Iondine131Thyroid2ndCancerRisk package is licensed under Apache License 2.0
 
 Development
 ===========
-I131Thyroid2ndCancerRisk was developed in ATLAS and R Studio.
+Iodine131Thyroid2ndCancerRisk was developed in ATLAS and R Studio.
 
 ### Development status
 
