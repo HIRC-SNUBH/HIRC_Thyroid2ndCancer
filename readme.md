@@ -1,6 +1,19 @@
-Iodine131Thyroid2ndCancerRisk
+I131Thyroid2ndCancerRisk
 ==============================
+<img src="https://img.shields.io/badge/Study%20Status-Repo%20Created-lightgray.svg" alt="Study Status: Repo Created">
 
+- Analytics use case(s): Population-Level Estimation
+- Study type: Clinical Application
+- Tags: Thyroid2ndCacner
+- Study lead: Hoyoung Lee, Sooyoung Yoo
+- Study lead forums tag: **[Sooyoung Yoo](https://forums.ohdsi.org/u/[Lead tag])**
+- Study start date: June 15, 2020
+- Study end date: 
+- Protocol: **[Protocol](https://github.com/SHUBH-HIRC/HIRC_Thyroid2ndCancer/blob/master/documents/protocol_I131EffectThyroid2ndCancerRisk.docx)**
+- Publications: 
+- Results explorer:
+
+This study is for estimating the effect of Iodine-131 exposure on the occurrence of secondary cancer in survivors of thyroid cancer.
 
 Requirements
 ============
@@ -12,6 +25,10 @@ Requirements
 - 25 GB of free disk space
 
 See [these instructions](https://ohdsi.github.io/MethodsLibrary/rSetup.html) on how to set up the R environment on Windows.
+
+- Required fields of CDM and Concept_id include:
+	- (Mandatory fields of CDM) : PERSON, OBSERVATION_PERIOD, CONDITION_OCCURRENCE, PROCEDURE_OCCURRENCE
+	- (Mandatory Concept_id) : [Iodine 131 therapy](https://athena.ohdsi.org/search-terms/terms/4036252), [Thyroidectomy](https://athena.ohdsi.org/search-terms/terms/4030107), [Total thyroidectomy](https://athena.ohdsi.org/search-terms/terms/4073199), 
 
 How to run
 ==========
@@ -38,7 +55,7 @@ How to run
 	
 	Alternatively, ensure that you have installed only the 64-bit versions of R and Java, as described in [the Book of OHDSI](https://ohdsi.github.io/TheBookOfOhdsi/OhdsiAnalyticsTools.html#installR)
 	
-2. In `R`, use the following `devtools` command to install the Iodine131Thyroid2ndCancerRisk package:
+2. In `R`, use the following `devtools` command to install the I131Thyroid2ndCancerRisk package:
 
 	```r
 	install() # Note: it is ok to delete inst/doc
@@ -47,7 +64,7 @@ How to run
 3. Once installed, you can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
 
 	```r
-	library(Iodine131Thyroid2ndCancerRisk)
+	library(I131Thyroid2ndCancerRisk)
 	
 	# Optional: specify where the temporary files (used by the ff package) will be created:
 	options(fftempdir = "c:/FFtemp")
@@ -59,7 +76,7 @@ How to run
 	minCellCount <- 5
 	
 	# The folder where the study intermediate and result files will be written:
-	outputFolder <- "c:/Iodine131Thyroid2ndCancerRisk"
+	outputFolder <- "c:/I131Thyroid2ndCancerRisk"
 	
 	# Details for connecting to the server:
 	# See ?DatabaseConnector::createConnectionDetails for help
@@ -100,7 +117,8 @@ How to run
             maxCores = maxCores)
 	```
 
-4. Upload the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator:
+4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (Sooyoung Yoo,
+(교수님 이메일 주소 or lijbdj5051@gmail.com):
 
 	```r
 	submitResults("export/Results<DatabaseId>.zip", key = "<key>", secret = "<secret>")
@@ -119,11 +137,11 @@ How to run
 
 License
 =======
-The Iodine131Thyroid2ndCancerRisk package is licensed under Apache License 2.0
+The I131Thyroid2ndCancerRisk package is licensed under Apache License 2.0
 
 Development
 ===========
-Iodine131Thyroid2ndCancerRisk was developed in ATLAS and R Studio.
+I131Thyroid2ndCancerRisk was developed in ATLAS and R Studio.
 
 ### Development status
 
