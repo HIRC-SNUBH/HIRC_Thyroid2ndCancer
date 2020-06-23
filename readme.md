@@ -6,7 +6,7 @@ Iodine131Thyroid2ndCancerRisk
 - Study type: Clinical Application
 - Tags: Thyroid2ndCacner
 - Study lead: Hoyoung Lee, Sooyoung Yoo
-- Study lead forums tag: **[Sooyoung Yoo](https://forums.ohdsi.org/u/[Lead tag])**
+- Study lead forums tag: **[Sooyoung Yoo](https://forums.ohdsi.org/u/sooyoung_yoo)**
 - Study start date: June 15, 2020
 - Study end date: 
 - Protocol: **[Protocol](https://github.com/SHUBH-HIRC/HIRC_Thyroid2ndCancer/blob/master/documents/protocol_Iodine131Thyroid2ndCancerRisk.docx)**
