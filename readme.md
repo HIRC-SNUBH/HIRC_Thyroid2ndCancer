@@ -117,7 +117,7 @@ How to run
             maxCores = maxCores)
 	```
 
-4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (Sooyoung Yoo,
+4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator 
 (yoosoo0@gmail.com or lijbdj5051@gmail.com):
 
 		
