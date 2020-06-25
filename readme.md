@@ -1,4 +1,4 @@
-I131Thyroid2ndCancerRisk
+Iodine131Thyroid2ndCancerRisk
 ==============================
 <img src="https://img.shields.io/badge/Study%20Status-Repo%20Created-lightgray.svg" alt="Study Status: Repo Created">
 
@@ -6,10 +6,10 @@ I131Thyroid2ndCancerRisk
 - Study type: Clinical Application
 - Tags: Thyroid2ndCacner
 - Study lead: Hoyoung Lee, Sooyoung Yoo
-- Study lead forums tag: **[Sooyoung Yoo](https://forums.ohdsi.org/u/[Lead tag])**
+- Study lead forums tag: **[Sooyoung Yoo](https://forums.ohdsi.org/u/sooyoung_yoo)**
 - Study start date: June 15, 2020
 - Study end date: 
-- Protocol: **[Protocol](https://github.com/SHUBH-HIRC/HIRC_Thyroid2ndCancer/blob/master/documents/protocol_I131EffectThyroid2ndCancerRisk.docx)**
+- Protocol: **[Protocol](https://github.com/SHUBH-HIRC/HIRC_Thyroid2ndCancer/blob/master/documents/protocol_Iodine131Thyroid2ndCancerRisk.docx)**
 - Publications: 
 - Results explorer:
 
@@ -117,14 +117,9 @@ How to run
             maxCores = maxCores)
 	```
 
-4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (Sooyoung Yoo,
-(교수님 이메일 주소 or lijbdj5051@gmail.com):
+4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator 
+(yoosoo0@gmail.com or lijbdj5051@gmail.com):
 
-	```r
-	submitResults("export/Results<DatabaseId>.zip", key = "<key>", secret = "<secret>")
-	```
-	
-	Where ```key``` and ```secret``` are the credentials provided to you personally by the study coordinator.
 		
 5. To view the results, use the Shiny app:
 
@@ -137,11 +132,11 @@ How to run
 
 License
 =======
-The I131Thyroid2ndCancerRisk package is licensed under Apache License 2.0
+The Iondine131Thyroid2ndCancerRisk package is licensed under Apache License 2.0
 
 Development
 ===========
-I131Thyroid2ndCancerRisk was developed in ATLAS and R Studio.
+Iodine131Thyroid2ndCancerRisk was developed in ATLAS and R Studio.
 
 ### Development status
 
