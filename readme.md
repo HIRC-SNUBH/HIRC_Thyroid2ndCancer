@@ -118,7 +118,7 @@ How to run
 	```
 
 4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator (Sooyoung Yoo,
-(교수님 이메일 주소 or lijbdj5051@gmail.com):
+(yoosoo0@gmail.com or lijbdj5051@gmail.com):
 
 		
 5. To view the results, use the Shiny app:
