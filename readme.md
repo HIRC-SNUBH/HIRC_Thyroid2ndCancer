@@ -4,7 +4,7 @@ Iodine131Thyroid2ndCancerRisk
 
 - Analytics use case(s): Population-Level Estimation
 - Study type: Clinical Application
-- Tags: Thyroid2ndCacner
+- Tags: Thyroid2ndCancer
 - Study lead: Hoyoung Lee, Sooyoung Yoo
 - Study lead forums tag: **[Sooyoung Yoo](https://forums.ohdsi.org/u/sooyoung_yoo)**
 - Study start date: July 15, 2020
