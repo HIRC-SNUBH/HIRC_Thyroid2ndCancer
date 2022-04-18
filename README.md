@@ -78,13 +78,14 @@ How to run
             maxCores = maxCores)
 	
 	
-		resultsZipFile <- file.path(outputFolder, "export", paste0("Results_", databaseId, ".zip"))
-dataFolder <- file.path(outputFolder, "shinyData")
+	resultsZipFile <- file.path(outputFolder, "export", paste0("Results_", databaseId, ".zip"))
+	dataFolder <- file.path(outputFolder, "shinyData")
 			
 	# Run Sub Analysis:
 	source("subAnalysis/R/Analysis.r")
 	getResults(outputFolder = outputFolder)
 	getSubAnalysis(outputFolder = outputFolder, ByCumDose = TRUE)
+	
 	```
 
 		
