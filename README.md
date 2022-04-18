@@ -1,19 +1,6 @@
-Iodine131Thyroid2ndCancerRisk
+thyroidCxSPM
 ==============================
-<img src="https://img.shields.io/badge/Study%20Status-Repo%20Created-lightgray.svg" alt="Study Status: Repo Created">
 
-- Analytics use case(s): Population-Level Estimation
-- Study type: Clinical Application
-- Tags: Thyroid2ndCancer
-- Study lead: Hoyoung Lee, Sooyoung Yoo
-- Study lead forums tag: **[Sooyoung Yoo](https://forums.ohdsi.org/u/sooyoung_yoo)**
-- Study start date: July 15, 2020
-- Study end date: 
-- Protocol: **[Protocol](https://github.com/SHUBH-HIRC/HIRC_Thyroid2ndCancer/blob/master/documents/protocol_Iodine131Thyroid2ndCancerRisk.docx)**
-- Publications: 
-- Results explorer:
-
-This study is for estimating the effect of Iodine-131 exposure on the occurrence of secondary cancer in survivors of thyroid cancer.
 
 Requirements
 ============
@@ -24,50 +11,25 @@ Requirements
 - [Java](http://java.com)
 - 25 GB of free disk space
 
-See [these instructions](https://ohdsi.github.io/MethodsLibrary/rSetup.html) on how to set up the R environment on Windows.
-
-- Required fields of CDM and Concept_id include:
-	- (Mandatory fields of CDM) : PERSON, OBSERVATION_PERIOD, CONDITION_OCCURRENCE, PROCEDURE_OCCURRENCE
-	- (Mandatory Concept_id) : [Iodine 131 therapy](https://athena.ohdsi.org/search-terms/terms/4036252), [Thyroidectomy](https://athena.ohdsi.org/search-terms/terms/4030107), [Total thyroidectomy](https://athena.ohdsi.org/search-terms/terms/4073199), 
-
 How to run
 ==========
-1. In `R`, use the following code to install the dependencies:
+1. Follow [these instructions](https://ohdsi.github.io/Hades/rSetup.html) for seting up your R environment, including RTools and Java. 
+
+2. Open your study package in RStudio. Use the following code to install all the dependencies:
 
 	```r
-	install.packages("devtools")
-	library(devtools)
-	install_github("ohdsi/ParallelLogger", ref = "v1.1.1")
-	install_github("ohdsi/SqlRender", ref = "v1.6.3")
-	install_github("ohdsi/DatabaseConnector", ref = "v2.4.1")
-	install_github("ohdsi/OhdsiSharing", ref = "v0.1.3")
-	install_github("ohdsi/FeatureExtraction", ref = "v2.2.5")
-	install_github("ohdsi/CohortMethod", ref = "v3.1.0")
-	install_github("ohdsi/EmpiricalCalibration", ref = "v2.0.0")
-	install_github("ohdsi/MethodEvaluation", ref = "v1.1.0")
+	renv::restore()
 	```
 
-	If you experience problems on Windows where rJava can't find Java, one solution may be to add `args = "--no-multiarch"` to each `install_github` call, for example:
-	
-	```r
-	install_github("ohdsi/SqlRender", args = "--no-multiarch")
-	```
-	
-	Alternatively, ensure that you have installed only the 64-bit versions of R and Java, as described in [the Book of OHDSI](https://ohdsi.github.io/TheBookOfOhdsi/OhdsiAnalyticsTools.html#installR)
-	
-2. In `R`, use the following `devtools` command to install the I131Thyroid2ndCancerRisk package:
+3. In RStudio, select 'Build' then 'Install and Restart' to build the package.
 
-	```r
-	install() # Note: it is ok to delete inst/doc
-	```
-	
 3. Once installed, you can execute the study by modifying and using the code below. For your convenience, this code is also provided under `extras/CodeToRun.R`:
 
 	```r
-	library(I131Thyroid2ndCancerRisk)
+	library(thyroidCxSPM)
 	
-	# Optional: specify where the temporary files (used by the ff package) will be created:
-	options(fftempdir = "c:/FFtemp")
+  # Optional: specify where the temporary files (used by the Andromeda package) will be created:
+  options(andromedaTempFolder = "c:/andromedaTemp")
 	
 	# Maximum number of cores to be used:
 	maxCores <- parallel::detectCores()
@@ -76,7 +38,7 @@ How to run
 	minCellCount <- 5
 	
 	# The folder where the study intermediate and result files will be written:
-	outputFolder <- "c:/I131Thyroid2ndCancerRisk"
+	outputFolder <- "c:/thyroidCxSPM"
 	
 	# Details for connecting to the server:
 	# See ?DatabaseConnector::createConnectionDetails for help
@@ -112,19 +74,22 @@ How to run
             createCohorts = TRUE,
             synthesizePositiveControls = TRUE,
             runAnalyses = TRUE,
-            runDiagnostics = TRUE,
             packageResults = TRUE,
             maxCores = maxCores)
 	```
 
-4. Please send the file ```export/Results<DatabaseId>.zip``` in the output folder to the study coordinator 
-(yoosoo0@gmail.com or lijbdj5051@gmail.com):
+4. Upload the file ```export/Results_<DatabaseId>.zip``` in the output folder to the study coordinator:
 
+	```r
+	uploadResults(outputFolder, privateKeyFileName = "<file>", userName = "<name>")
+	```
+	
+	Where ```<file>``` and ```<name<``` are the credentials provided to you personally by the study coordinator.
 		
 5. To view the results, use the Shiny app:
 
 	```r
-	prepareForEvidenceExplorer("Result<databaseId>.zip", "/shinyData")
+	prepareForEvidenceExplorer("Result_<databaseId>.zip", "/shinyData")
 	launchEvidenceExplorer("/shinyData", blind = TRUE)
 	```
   
@@ -132,11 +97,11 @@ How to run
 
 License
 =======
-The Iondine131Thyroid2ndCancerRisk package is licensed under Apache License 2.0
+The thyroidCxSPM package is licensed under Apache License 2.0
 
 Development
 ===========
-Iodine131Thyroid2ndCancerRisk was developed in ATLAS and R Studio.
+thyroidCxSPM was developed in ATLAS and R Studio.
 
 ### Development status
 

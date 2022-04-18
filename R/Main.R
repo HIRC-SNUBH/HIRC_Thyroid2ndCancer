@@ -1,6 +1,6 @@
-# Copyright 2019 Observational Health Data Sciences and Informatics
+# Copyright 2020 Observational Health Data Sciences and Informatics
 #
-# This file is part of Iodine131Thyroid2ndCancerRisk
+# This file is part of thyroidCxSPM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 #' Execute the Study
 #'
 #' @details
-#' This function executes the Iodine131Thyroid2ndCancerRisk Study.
+#' This function executes the thyroidCxSPM Study.
 #' 
 #' The \code{createCohorts}, \code{synthesizePositiveControls}, \code{runAnalyses}, and \code{runDiagnostics} arguments
 #' are intended to be used to run parts of the full study at a time, but none of the parts are considered to be optional.
@@ -47,7 +47,6 @@
 #' @param createCohorts        Create the cohortTable table with the exposure and outcome cohorts?
 #' @param synthesizePositiveControls  Should positive controls be synthesized?
 #' @param runAnalyses          Perform the cohort method analyses?
-#' @param runDiagnostics       Compute study diagnostics?
 #' @param packageResults       Should results be packaged for later sharing?     
 #' @param maxCores             How many parallel cores should be used? If more cores are made available
 #'                             this can speed up the analyses.
@@ -83,19 +82,16 @@ execute <- function(connectionDetails,
                     createCohorts = TRUE,
                     synthesizePositiveControls = TRUE,
                     runAnalyses = TRUE,
-                    runDiagnostics = TRUE,
                     packageResults = TRUE,
                     maxCores = 4,
                     minCellCount= 5) {
   if (!file.exists(outputFolder))
     dir.create(outputFolder, recursive = TRUE)
-  if (!is.null(getOption("fftempdir")) && !file.exists(getOption("fftempdir"))) {
-    warning("fftempdir '", getOption("fftempdir"), "' not found. Attempting to create folder")
-    dir.create(getOption("fftempdir"), recursive = TRUE)
-  }
-  
+
   ParallelLogger::addDefaultFileLogger(file.path(outputFolder, "log.txt"))
-  on.exit(ParallelLogger::unregisterLogger("DEFAULT"))
+  ParallelLogger::addDefaultErrorReportLogger(file.path(outputFolder, "errorReportR.txt"))
+  on.exit(ParallelLogger::unregisterLogger("DEFAULT_FILE_LOGGER", silent = TRUE))
+  on.exit(ParallelLogger::unregisterLogger("DEFAULT_ERRORREPORT_LOGGER", silent = TRUE), add = TRUE)
   
   if (createCohorts) {
     ParallelLogger::logInfo("Creating exposure and outcome cohorts")
@@ -131,12 +127,6 @@ execute <- function(connectionDetails,
                     oracleTempSchema = oracleTempSchema,
                     outputFolder = outputFolder,
                     maxCores = maxCores)
-  }
-  
-  if (runDiagnostics) {
-    ParallelLogger::logInfo("Running diagnostics")
-    generateDiagnostics(outputFolder = outputFolder,
-                        maxCores = maxCores)
   }
   
   if (packageResults) {
