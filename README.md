@@ -6,7 +6,7 @@ Requirements
 ============
 
 - A database in [Common Data Model version 5](https://github.com/OHDSI/CommonDataModel) in one of these platforms: SQL Server, Oracle, PostgreSQL, IBM Netezza, Apache Impala, Amazon RedShift, Google BigQuery, or Microsoft APS.
-- R version 3.5.0 or newer
+- R version 3.6.3 or newer
 - On Windows: [RTools](http://cran.r-project.org/bin/windows/Rtools/)
 - [Java](http://java.com)
 - 25 GB of free disk space
@@ -28,8 +28,8 @@ How to run
 	```r
 	library(thyroidCxSPM)
 	
-  # Optional: specify where the temporary files (used by the Andromeda package) will be created:
-  options(andromedaTempFolder = "c:/andromedaTemp")
+	# Optional: specify where the temporary files (used by the Andromeda package) will be created:
+	options(andromedaTempFolder = file.path(getwd(),"andromedaTemp"))
 	
 	# Maximum number of cores to be used:
 	maxCores <- parallel::detectCores()
@@ -38,7 +38,7 @@ How to run
 	minCellCount <- 5
 	
 	# The folder where the study intermediate and result files will be written:
-	outputFolder <- "c:/thyroidCxSPM"
+	outputFolder <- file.path(getwd(),"results")
 	
 	# Details for connecting to the server:
 	# See ?DatabaseConnector::createConnectionDetails for help
@@ -76,21 +76,23 @@ How to run
             runAnalyses = TRUE,
             packageResults = TRUE,
             maxCores = maxCores)
-	```
-
-4. Upload the file ```export/Results_<DatabaseId>.zip``` in the output folder to the study coordinator:
-
-	```r
-	uploadResults(outputFolder, privateKeyFileName = "<file>", userName = "<name>")
-	```
 	
-	Where ```<file>``` and ```<name<``` are the credentials provided to you personally by the study coordinator.
+	
+		resultsZipFile <- file.path(outputFolder, "export", paste0("Results_", databaseId, ".zip"))
+dataFolder <- file.path(outputFolder, "shinyData")
+			
+	# Run Sub Analysis:
+	source("subAnalysis/R/Analysis.r")
+	getResults(outputFolder = outputFolder)
+	getSubAnalysis(outputFolder = outputFolder, ByCumDose = TRUE)
+	```
+
 		
 5. To view the results, use the Shiny app:
 
 	```r
 	prepareForEvidenceExplorer("Result_<databaseId>.zip", "/shinyData")
-	launchEvidenceExplorer("/shinyData", blind = TRUE)
+	launchEvidenceExplorer("/shinyData", blind = FALSE)
 	```
   
   Note that you can save plots from within the Shiny app. It is possible to view results from more than one database by applying `prepareForEvidenceExplorer` to the Results file from each database, and using the same data folder. Set `blind = FALSE` if you wish to be unblinded to the final results.
