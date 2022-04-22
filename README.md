@@ -1,6 +1,12 @@
 thyroidCxSPM
 ==============================
-
+- Study type: Population Estimation
+- Tags: thyroidCancer, Iodine 131 Therapy, Secondary Primary Cancer, OHDSI, CDM
+- Study lead: Ho Young Lee 
+- Study lead forums tag: [[Lead tag]](https://forums.ohdsi.org/u/[Lead tag])
+- Study start date: 2019.08.01
+- Study end date: 2022.01.31
+- Publications: https://trebuchet.public.springernature.app/get_content/03cc3630-d74f-498f-b54a-1f2fde7bfbff
 
 Requirements
 ============
